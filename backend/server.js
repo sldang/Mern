@@ -3,6 +3,9 @@
 //#1 require the express package
 const express = require('express')
 
+//create variable to connect to the databse
+const mongoose = require('mongoose')
+
 //#2 start up express app
 const app = express()
 
@@ -22,7 +25,14 @@ app.use((req,res,next) =>{
 //when we fire a request to the route in the '' then we use the workoutRoutes
 app.use('/api/workouts', workoutRoutes)
 
-//#3 listen for requests or port number 
-app.listen(process.env.PORT, () =>{
+//connect to db
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+    //#3 listen for requests or port number 
+    app.listen(process.env.PORT, () =>{
     console.log('listening on port 4000')
 })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
