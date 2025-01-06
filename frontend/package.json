@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "postcss": "^8.4.49",
     "web-vitals": "^4.2.4"
   }
 }
