@@ -10,6 +10,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 const workoutRoutes = require('./routes/workouts')
+const userRoutes = require('./routes/user')
 
 require('dotenv').config()
 
@@ -23,7 +24,10 @@ app.use((req,res,next) =>{
 
 //react to requests (routes)
 //when we fire a request to the route in the '' then we use the workoutRoutes
+//we are registering the routes here in the server.js file 
 app.use('/api/workouts', workoutRoutes)
+
+app.use('/api/user', userRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
