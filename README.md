@@ -1,7 +1,7 @@
 ### This application is not hosted on a website yet. 
 
 ## To use:
-First create a .env file and have the current information:
+First create a .env file in the backend folder and have the current information: <br />
 PORT = 4000 <br />
 MONGO_URI = {used to connect the local application to mongodb} <br />
 SECRET = {used for bcrypt for encryption for the users} <br />
