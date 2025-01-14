@@ -1,6 +1,6 @@
-This application is not hosted on a website yet. 
+### This application is not hosted on a website yet. 
 
-To use:
+## To use:
 First create a .env file and have the current information:
 PORT = 4000
 MONGO_URI = {used to connect the local application to mongodb}
